@@ -18,6 +18,8 @@ import java.util.List;
 public class ExternalService {
 
     public String searchResult(String name) throws URISyntaxException, IOException {
+        // NameValuePair is a special <Key, Value> pair which is used to represent parameters
+        // in http request, i.e. www.example.com?key=value.
         NameValuePair queryValuePair=new BasicNameValuePair("name",name);
         return sendHttpRequest(List.of(queryValuePair));
     }
